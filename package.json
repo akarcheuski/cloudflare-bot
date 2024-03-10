@@ -1,0 +1,25 @@
+{
+  "name": "gramy_cloudflare_dev_template",
+  "version": "0.0.1",
+  "description": "Starter template for Grammy Telegram Bot with Cloudflare Workers hosting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && wrangler dev",
+    "deploy": "npx tsc && wrangler deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240222.0",
+    "typescript": "^5.4.2",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.11.25",
+    "dotenv": "^16.4.5",
+    "wrangler": "3.32.0"
+  },
+  "private": true,
+  "dependencies": {
+    "grammy": "^1.21.1"
+  }
+}

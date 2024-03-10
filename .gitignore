@@ -1,0 +1,8 @@
+# Git Ignore file of node project
+node_modules
+npm-debug.log
+dist
+.env
+.wrangler
+# .dev.vars
+# wrangler.toml
