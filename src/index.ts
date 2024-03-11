@@ -22,7 +22,7 @@ import { initBot } from "./bot";
  */
 
 export default {
-    async fetch(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    async fetch(req: Request, env: Env): Promise<Response> {
         try {
             const bot = initBot(env);
             const cb = webhookCallback(bot, "cloudflare-mod");
