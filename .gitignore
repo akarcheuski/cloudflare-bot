@@ -5,4 +5,4 @@ dist
 .env
 .wrangler
 .dev.vars
-rangler.toml
+wrangler.toml
