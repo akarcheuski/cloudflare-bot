@@ -2,4 +2,5 @@ account_id = "<CLOUDFLARE_ACCOUNT_ID>"
 name = "gramy_cloudflare_dev_template"
 main = "src/index.ts"
 compatibility_date = "2024-03-09"
-node_compat = true
+nodejs_compat = true
+
