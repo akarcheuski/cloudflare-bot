@@ -8,9 +8,9 @@ export const initBot = (env: Env): Bot => {
     const bot = new Bot(BOT_TOKEN, { botInfo: BOT_INFO });
     
     // Handle the /start command.
-    bot.command("start", async (ctx) => await ctx.reply("Welcome! Up and running."));
+    bot.command("start", async (ctx) => await ctx.reply("Бот Андрея и Марии. Напишите сообщение"));
     // Handle other messages.
-    bot.on("message", async (ctx) => await ctx.reply("Got message!"));
+    bot.on("message", async (ctx) => await ctx.reply("Сообщение получено. Спасибо"));
 
     return bot;
 }
