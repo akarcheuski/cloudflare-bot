@@ -1,6 +1,7 @@
 account_id = "2f603d82990d91696c626ad72497dd54"
 name = "cloudflare-bot"
 main = "src/index.ts"
-compatibility_date = "2024-03-09"
+compatibility_flags = [ "nodejs_compat" ]
+compatibility_date = "2025-03-09"
 nodejs_compat = true
 
