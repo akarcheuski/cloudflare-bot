@@ -19,15 +19,15 @@ export const initBot = (env: Env): Bot => {
 
     // Creating a simple menu
     const menu = new Menu("my-menu-identifier")
-        .text("A", (ctx) => ctx.reply("You pressed A!")).row()
-        .text("B", (ctx) => ctx.reply("You pressed B!"));
+        .text("Order Mini App", (ctx) => ctx.reply("You selected Order Mini App")).row()
+        .text("Order Bot", (ctx) => ctx.reply("You selected Order Bot"));
 
     // Make it interactive
     bot.use(menu);
 
     bot.command("start", async (ctx) => {
         // Send the menu:
-        await ctx.reply("Check out this menu:", { reply_markup: menu });
+        await ctx.reply("Меню:", { reply_markup: menu });
     });
 
     // Handle other messages.
@@ -50,8 +50,6 @@ export const initBot = (env: Env): Bot => {
     // bot.use(menuMiddleware);
 
     // bot.start();
-
-
 
     return bot;
 }
