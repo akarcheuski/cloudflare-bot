@@ -19,8 +19,8 @@ export const initBot = (env: Env): Bot => {
 
     // Creating a simple menu
     const menu = new Menu("my-menu-identifier")
-        .text("Order Mini App", (ctx) => ctx.reply("You selected Order Mini App")).row()
-        .text("Order Bot", (ctx) => ctx.reply("You selected Order Bot"));
+        .text("Order Application", (ctx) => ctx.reply("You selected Application")).row()
+        .text("Order Game", (ctx) => ctx.reply("You selected Game"));
 
     // Make it interactive
     bot.use(menu);
@@ -31,7 +31,7 @@ export const initBot = (env: Env): Bot => {
     });
 
     // Handle other messages.
-    bot.on("message", async (ctx) => await ctx.reply("Сообщение получено. Спасибо"));
+   // bot.on("message", async (ctx) => await ctx.reply("Сообщение получено. Спасибо"));
 
     // const menuTemplate = new MenuTemplate<MyContext>((ctx) =>
     //     `Hi`

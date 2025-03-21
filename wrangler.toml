@@ -4,7 +4,6 @@ main = "src/index.ts"
 compatibility_flags = [ "nodejs_compat" ]
 compatibility_date = "2025-03-09"
 nodejs_compat = true
-BOT_TOKEN=8120385552:AAFRjuFOjCoX3weS6ez79s4fu25UJ4V-tx8
 BOT_INFO="""{
     "id": 8120385552,
     "is_bot": true,
