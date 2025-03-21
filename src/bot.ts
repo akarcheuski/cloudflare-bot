@@ -16,6 +16,20 @@ export const initBot = (env: Env): Bot => {
     // const bot = new Bot<MyContext>(BOT_TOKEN, { botInfo: BOT_INFO });
     // Handle the /start command.
     // bot.command("start", async (ctx) => await ctx.reply("Бот Андрея и Марии. Напишите сообщение"));
+
+    // Creating a simple menu
+    const menu = new Menu("my-menu-identifier")
+        .text("A", (ctx) => ctx.reply("You pressed A!")).row()
+        .text("B", (ctx) => ctx.reply("You pressed B!"));
+
+    // Make it interactive
+    bot.use(menu);
+
+    bot.command("start", async (ctx) => {
+        // Send the menu:
+        await ctx.reply("Check out this menu:", { reply_markup: menu });
+    });
+
     // Handle other messages.
     bot.on("message", async (ctx) => await ctx.reply("Сообщение получено. Спасибо"));
 
@@ -37,18 +51,7 @@ export const initBot = (env: Env): Bot => {
 
     // bot.start();
 
-    // Creating a simple menu
-    const menu = new Menu("my-menu-identifier")
-        .text("A", (ctx) => ctx.reply("You pressed A!")).row()
-        .text("B", (ctx) => ctx.reply("You pressed B!"));
 
-    // Make it interactive
-    bot.use(menu);
-
-    bot.command("start", async (ctx) => {
-        // Send the menu:
-        await ctx.reply("Check out this menu:", { reply_markup: menu });
-    });
 
     return bot;
 }
