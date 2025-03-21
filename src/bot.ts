@@ -1,6 +1,6 @@
 import Env from "./environment.d";
 //import { Bot } from "grammy";
-import { MenuMiddleware, MenuTemplate } from 'grammy-inline-menu';
+//import { MenuMiddleware, MenuTemplate } from 'grammy-inline-menu';
 import { UserFromGetMe } from "grammy/types";
 import { Bot, type Context as BaseContext } from 'grammy';
 import { Menu } from '@grammyjs/menu';
